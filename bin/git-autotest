@@ -15,7 +15,7 @@ n() { # (icon, title, message)
 
   # Ubuntu libnotify
   elif [ "`which notify-send`" != "" ]; then
-    notify-send -i $1 "$2" "$3"
+    notify-send -i "$IMAGES/$1.png" "$2" "$3"
 
   else
     echo "$1: $3"
