@@ -7,7 +7,7 @@ IMAGES="${PREFIX}/../share/git-autotest/images"
 n() { # (icon, title, message)
   # Growlnotify from the Growl package
   if [ "`which growlnotify`" != "" ]; then
-    growlnotify -p 2 -d "raketest-$1" -t "$2" -n "Work" --image "$IMAGES/$1.png" -m "$3" $4 $5 $6 $7 $8 $9
+    growlnotify -p 2 -d "raketest" -t "$2" -n "Work" --image "$IMAGES/$1.png" -m "$3" $4 $5 $6 $7 $8 $9
 
   # Ruby-growl
   elif [ "`which growl`" != "" ]; then
