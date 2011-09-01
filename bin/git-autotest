@@ -36,6 +36,7 @@ run_test() {
   fi
 
   n test "$PROJECT" "Invoking '$CMD'..."
+  echo >test.log
   sh -c "$CMD" 2>test.log 1>test.log
   RESULT="$?"
 
