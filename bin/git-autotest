@@ -37,8 +37,9 @@ run_test() {
 
   n test "$PROJECT" "Invoking '$CMD'..."
   sh -c "$CMD" 2>test.log 1>test.log
+  RESULT="$?"
 
-  if [ "$?" == "0" ]; then
+  if [ "$RESULT" == "0" ]; then
     n success "$PROJECT" "Tests are all good."
     exit 0
   else
