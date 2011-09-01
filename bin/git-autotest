@@ -49,7 +49,7 @@ run_test() {
 }
 
 ensure_not_installed() {
-  if [ -n "`cat .git/hooks/post-commit | grep \"git autotest\"`" ]; then
+  if [ -n "`cat .git/hooks/post-commit 2>/dev/null | grep \"git autotest\"`" ]; then
     echo "==> git-autotest is already installed in this repository."
     return 1
   fi

@@ -50,8 +50,11 @@ When you install (`git autotest install`) it, it does:
 
  - Set the autotest command to what you specify (defaults to `rake test`).
  You'll find this in `.git/config`.
- - Adds a post-commit hook to run the tests (`git autotest run`).
+ - Adds a post-commit hook to run the tests (`git autotest run`). This is in 
+ `.git/hooks`.
  - Ignores `test.log` in that repository.
+ - ...No, none of these changes will be committed to your repository. They will 
+ be local settings on your working copy.
 
 ### On commit
 
