@@ -47,10 +47,18 @@ run_test() {
   fi
 }
 
+ensure_not_installed() {
+  if [ -n "`cat .git/hooks/post-commit | grep \"git autotest\"`" ]; then
+    echo "==> git-autotest is already installed in this repository."
+    return 1
+  fi
+}
 run_install() {
   if [ -d ".git/hooks" ]; then
     CMD=$1
     CMD=${CMD:="rake test"}
+
+    ensure_not_installed || return 1
 
     git config hooks.autotestcommand "$CMD"
     echo "==> The command '$CMD' will be executed after every commit."
