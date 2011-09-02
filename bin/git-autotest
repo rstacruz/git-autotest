@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
-PREFIX="`dirname $0`"
+PREFIX=$BUNDLE_ROOT
+PREFIX=${PREFIX:="`dirname $0`"}
 PROJECT="$(basename `pwd`)"
 IMAGES="${PREFIX}/../share/git-autotest/images"
 

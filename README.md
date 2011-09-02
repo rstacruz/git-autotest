@@ -7,7 +7,15 @@ Growl/Libnotify notification telling you if your tests pass or fail.
 Installation
 ------------
 
-Check me out somewhere then run `make install`.
+If you have [ShellBundler](http://github.com/rstacruz/shellbundler) installed, 
+just drop this on your ~/.bash/bundle.
+
+    $ git checkout git://github.com/rstacruz/git-autotest ~/.bash/bundle
+
+Installation for everyone else
+------------------------------
+
+No ShellBundler? Okay. Check me out somewhere then run `make install`.
 
     $ git checkout git://github.com/rstacruz/git-autotest
     $ cd git-autotest
